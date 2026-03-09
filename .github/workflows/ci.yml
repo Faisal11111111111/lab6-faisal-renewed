@@ -165,7 +165,7 @@ jobs:
         run: az acr login --name ${{ secrets.ACR_NAME }}
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+        uses: docker/setup-buildx-action@v4
 
       - name: Build and Push ${{ matrix.image }} for ${{ matrix.platform }}
         run: |
@@ -202,7 +202,7 @@ jobs:
         run: az acr login --name ${{ secrets.ACR_NAME }}
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+        uses: docker/setup-buildx-action@v4
 
       - name: Create all multi-platform manifests
         run: |
@@ -330,7 +330,7 @@ jobs:
           persist-credentials: false
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+        uses: docker/setup-buildx-action@v4
 
       - name: Build Presidio images locally
         run: |
